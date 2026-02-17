@@ -4,7 +4,7 @@ import { Leaf, Heart, Award } from "lucide-react";
 const features = [
   {
     icon: Leaf,
-    title: "100% Natural",
+    title: "Natural",
     description: "Sin aditivos, sin pasteurizar. Miel cruda tal como la produce la naturaleza.",
   },
   {

@@ -29,7 +29,7 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="inline-block text-honey-gold font-body text-sm font-semibold tracking-widest uppercase mb-4"
           >
-            Miel 100% natural y artesanal
+            Miel artesanal
           </motion.span>
 
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold leading-[0.95] mb-6 text-honey-cream">
