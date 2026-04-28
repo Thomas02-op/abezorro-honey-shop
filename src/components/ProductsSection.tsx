@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import ProductCard from "./ProductCard";
 import honeyWildflower from "@/assets/honey-wildflower.jpg";
 import honeyLavender from "@/assets/honey-lavender.jpg";
-import honeyHoneycomb from "@/assets/honey-honeycomb.jpg";
 
 const products = [
   {
@@ -18,13 +17,6 @@ const products = [
     price: "€14,90",
     weight: "500g",
     image: honeyLavender,
-  },
-  {
-    name: "Miel con Panal",
-    description: "Pura experiencia: miel cruda con trozos de panal natural, tal como la hacen las abejas.",
-    price: "€18,50",
-    weight: "400g",
-    image: honeyHoneycomb,
   },
 ];
 
@@ -50,7 +42,7 @@ const ProductsSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto justify-items-center">
           {products.map((product, i) => (
             <ProductCard key={product.name} {...product} delay={i * 0.15} />
           ))}
