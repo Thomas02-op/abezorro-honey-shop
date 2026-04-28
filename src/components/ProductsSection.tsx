@@ -6,15 +6,15 @@ const products = [
   {
     name: "Miel de Flores Silvestres",
     description: "Suave y aromática, recolectada de praderas naturales llenas de diversidad floral.",
-    price: "€12,90",
+    price: "$30.000 COP",
     weight: "500g",
     image: honeyJar,
   },
   {
     name: "Miel de Lavanda",
-    description: "Delicada y perfumada, con notas florales únicas de los campos de lavanda.",
-    price: "€14,90",
-    weight: "500g",
+    description: "Delicada y perfumada, con notas florales únicas de los campos de lavanda. Lleva 2 tarros por un precio especial.",
+    price: "$50.000 COP",
+    weight: "2 x 500g",
     image: honeyJar,
   },
 ];
