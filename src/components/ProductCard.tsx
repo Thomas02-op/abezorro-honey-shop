@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ShoppingBag } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 
 interface ProductCardProps {
   name: string;
@@ -10,14 +10,21 @@ interface ProductCardProps {
   delay?: number;
 }
 
+const WHATSAPP_NUMBER = "34600000000"; // Reemplaza por el número real de Abezorro
+
 const ProductCard = ({ name, description, price, weight, image, delay = 0 }: ProductCardProps) => {
+  const message = encodeURIComponent(
+    `Hola Abezorro, me interesa la ${name} de ${weight}.`
+  );
+  const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.6, delay }}
-      className="group bg-card rounded-2xl overflow-hidden border border-border hover:shadow-honey-lg transition-all duration-500"
+      className="group bg-card rounded-2xl overflow-hidden border border-border hover:shadow-honey-lg transition-all duration-500 w-full max-w-sm"
     >
       <div className="aspect-square overflow-hidden bg-secondary">
         <img
@@ -37,12 +44,17 @@ const ProductCard = ({ name, description, price, weight, image, delay = 0 }: Pro
         <p className="text-sm text-muted-foreground leading-relaxed mb-4">
           {description}
         </p>
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between gap-3">
           <span className="text-2xl font-display font-bold text-primary">{price}</span>
-          <button className="flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2.5 rounded-full text-sm font-semibold hover:bg-accent transition-colors">
-            <ShoppingBag size={14} />
-            Añadir
-          </button>
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 bg-[hsl(var(--whatsapp))] text-white px-4 py-2.5 rounded-full text-sm font-semibold hover:bg-[hsl(var(--whatsapp-dark))] transition-colors shadow-md"
+          >
+            <MessageCircle size={16} />
+            Pedir por WhatsApp
+          </a>
         </div>
       </div>
     </motion.div>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ShoppingBag } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { label: "Inicio", href: "#inicio" },
@@ -35,13 +35,6 @@ const Navbar = () => {
               {link.label}
             </a>
           ))}
-          <a
-            href="#productos"
-            className="flex items-center gap-2 bg-primary text-primary-foreground px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-accent transition-colors"
-          >
-            <ShoppingBag size={16} />
-            Comprar
-          </a>
         </div>
 
         {/* Mobile toggle */}
@@ -74,14 +67,6 @@ const Navbar = () => {
                   {link.label}
                 </a>
               ))}
-              <a
-                href="#productos"
-                onClick={() => setIsOpen(false)}
-                className="flex items-center gap-2 bg-primary text-primary-foreground px-6 py-2.5 rounded-full text-sm font-semibold"
-              >
-                <ShoppingBag size={16} />
-                Comprar
-              </a>
             </div>
           </motion.div>
         )}
