@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import ProductCard from "./ProductCard";
-import honeyWildflower from "@/assets/honey-wildflower.jpg";
-import honeyLavender from "@/assets/honey-lavender.jpg";
+import honeyJar from "@/assets/honey-abezorro-jar.png";
 
 const products = [
   {
@@ -9,14 +8,14 @@ const products = [
     description: "Suave y aromática, recolectada de praderas naturales llenas de diversidad floral.",
     price: "€12,90",
     weight: "500g",
-    image: honeyWildflower,
+    image: honeyJar,
   },
   {
     name: "Miel de Lavanda",
     description: "Delicada y perfumada, con notas florales únicas de los campos de lavanda.",
     price: "€14,90",
     weight: "500g",
-    image: honeyLavender,
+    image: honeyJar,
   },
 ];
 
